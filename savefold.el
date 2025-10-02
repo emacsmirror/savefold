@@ -49,11 +49,9 @@ See `savefold--all-backends' for a list of possible values."
   :type 'directory
   :group 'savefold)
 
-;; https://github.com/gregsexton/origami.el/issues/120
 (defvar savefold--all-backends (append
                                 '( outline org hideshow ts-fold yafolding
-                                   hide-ifdef markdown)
-                                (when (version< emacs-version "30") '(origami))
+                                   hide-ifdef markdown origami)
                                 (when (version< "29" emacs-version) '(treesit-fold)))
   "List of supported folding backends.")
 
